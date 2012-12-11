@@ -1,0 +1,423 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Myriad Pro, Sans-Serif;
+    font-size: 15px;
+    line-height: 20px;
+}
+li
+{
+    margin-bottom: 2px;
+    list-style-type:none;
+}
+
+li a
+{
+    background: #6dadc0;
+    color: #fff;
+    padding-left: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 19pt;
+}
+
+li:hover a
+{
+    background-color: #8AC1CE;
+}
+
+li.active a
+{
+    background-color: #000;
+}
+#header
+{
+    background-color: Black;
+    padding: 5px 0;
+    margin-bottom: 2px;
+}
+#banner
+{
+    background: #66a5ba url('../billeder/head-bg.png') repeat-x bottom;
+}
+#logo
+{
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1140px;
+    min-width: 755px;
+}
+#logo img
+{
+    padding: 20px 0;
+}
+#wrap
+{
+    margin: auto;
+    margin-top: 12px;
+    max-width: 1140px;
+}
+#first_colon
+{
+    width: 22.05%;
+    float: left;
+}
+#menu_v, #side_panel_v
+{
+    padding-right: 20px;
+}
+#second_colon
+{
+    float: left;
+    border-left: 1px solid #CCCDCF;
+    border-right: 1px solid #CCCDCF;
+    border-bottom-width: 0;
+    border-top-width: 0;
+    width: 55.6%;
+}
+#second_colon_content
+{
+    padding: 0 20px;
+}
+#third_colon
+{
+    float: right;
+    width: 22.05%;
+}
+#first_colon, #second_colon, #third_colon
+{
+    margin-bottom: 30px;
+}
+#menu_h, #side_panel_h
+{
+    padding-left: 20px;
+}
+hr {
+    border: 0px;
+    height: 1px;
+    background-color: #BBBDC0;
+    margin: 20px 0 15px 0;
+}
+#second_colon_content hr
+{
+    float: none;
+}
+h1
+{
+    font-size: 28pt;
+    line-height: 28pt;
+}
+h2
+{
+    margin-top: 10px;
+    font-size: 22pt;
+    line-height: 22pt;
+}
+h3
+{
+    margin-bottom: 2%;
+}
+h4
+{
+    font-size: 24pt;
+    line-height: 26pt;
+    margin-bottom: 20px;
+}
+.sidepanel h4 a, h2 a
+{
+    font-size: 24pt;
+    line-height: 26pt;
+    margin-bottom: 20px;
+    color: Black !important;
+    text-decoration: none !important;
+}
+#side_panel_v a, #side_panel_v a:visited, #side_panel_h a, #side_panel_h a:visited
+{
+    color: #E29925;
+    text-decoration: underline;
+}
+#side_panel_v a:hover, #side_panel_h a:hover
+{
+    color: #DDAF6C;
+}
+#second_colon p
+{
+    margin: 10px 0;
+    margin-top: 10px;
+}
+#second_colon h1
+{
+    margin-top: 10px;
+}
+#forside_stiki
+{
+    padding: 0 20px;
+}
+#forside_stiki img
+{
+    width: 100%;
+}
+.forside_nyhed
+{
+    float: left;
+    width: 47.5%;
+    margin-right: 2%
+}
+.forside_nyhed img
+{
+    width: 100%;
+    height: 50%;
+    max-height: 150px;
+}
+.forside_nyhed a
+{
+    color: Black;
+}
+#forside_nyhed
+{
+    padding-left: 20px;
+}
+#program_kalender
+{
+    float: right;
+    width: 48%;
+}
+#program_info
+{
+    float: left;
+    width: 48%;
+    margin-right: 3.8%;
+}
+#program_kalender a
+{
+    text-decoration: none;
+}
+#color_box
+{
+    height: 20px;
+    margin-top: 2%;
+}
+.orange 
+{
+    background: #E39925;
+}
+.blue
+{
+    background: #6DADC0;
+}
+.orange, .blue
+{
+    width: 12%;
+    height: 12px;
+    display: block;
+    margin-top: 2%;   
+}
+.color-box span 
+{
+    float: left;
+    margin-right: 3%;
+}
+#program_dag
+{
+    float: left;
+    width: 100%;
+}
+#program_dag h2 span
+{
+    font-size: 18pt;    
+}
+.program_dag
+{
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    margin-right: 8%;
+}
+#genre_second_colon_content_left
+{
+    float: left;
+    width: 39.45%;
+    margin-top: 20px;
+}
+#genre_second_colon_content_left li:hover a, #genre_second_colon_content_left a
+{
+    background: #6DADC0;
+    font-size: 15px;
+    line-height: 20px;
+}
+.genre_kategori h3, .genre_kategori_info h3
+{
+    background-color: #E39925;
+    margin: 10px 10px 0 10px;
+    padding: 10px;
+    color: white;
+    font-size: 13pt;
+}
+.genre_kategori_info_p
+{
+    padding: 10px;
+    background-color: #6DADC0;
+    margin: 3px 10px 10px 10px;
+    color: white;
+}
+.genre_kategori_info p
+{
+    margin: 10px 0px;
+}
+.genre
+{
+    padding: 10px;
+    background-color: #6DADC0;
+    margin: 3px 10px 10px 10px;
+    color: white;
+}
+.genre ul
+{
+    margin-left: 20px;
+}
+.genre li
+{
+    list-style-type: disc;
+}
+.genre_program li
+{
+    list-style-type: circle;
+}
+.genre_bg
+{
+    border: 1px solid #F0F0F0;
+    background-image: url('../billeder/music-program-box-bg.png');
+    background-repeat: repeat-x;
+}
+.genre_kategori_info
+{
+    width: 56.75%;
+    border: 1px solid #F0F0F0;
+    background-image: url('../billeder/music-program-box-bg.png');
+    background-repeat: repeat-x;
+    float: right;
+    margin-top: 20px;
+}
+#footer_info
+{
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: black;
+    width: 95%;
+}
+#footer_info p
+{
+    margin-right: 3.8%;
+    float: left;
+    color: White;
+}
+#footer_info a
+{
+    color: White;
+}
+.footer_info
+{
+    width: 13.45%;
+}
+#footer_info1
+{
+    width: 22.05%;
+}
+.nav, .nav li, .nav li a, #top,  #top_navn
+{
+    background-color: #1B1B1B !important;
+    color: #999999;
+    float: left;
+    font-family: Arial, Sans-Serif !important;
+}
+.nav li a:hover, #top_navn:hover
+{
+    color: White;
+}
+.nav li a
+{
+    padding: 10px 15px 10px;
+    font-size: 14px;
+}
+#top, .content
+{
+    width: 100%;
+    
+}
+#top_navn
+{
+    padding: 10px 20px 10px;
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: none;
+}
+.logud
+{
+    float: right;
+    color: Black;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 6px 10px 6px 10px;
+    text-align: center;
+}
+#top
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+#admin_menu
+{
+    width: 21%;
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    float: left;
+}
+#admin_menu li a
+{
+    line-height: 20px;
+    background-color: transparent;
+    color: #0088CC;
+    font-size: 14px;
+}
+#admin_menu_content
+{
+    padding: 9px 15px 9px 15px;
+    background-color: whiteSmoke;
+    border: 1px solid #E3E3E3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#indhold
+{
+    margin-left: 2.564102564102564%;
+    width: 74.35897435897436%;
+    float: left;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+#indhold h1
+{
+    margin: 10px 0;
+    font-weight: bold;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    font-size: 36px;
+    line-height: 40px;
+}
+.opret_ny
+{
+    float: right;
+    color: Black;
+    text-decoration: none;
+}

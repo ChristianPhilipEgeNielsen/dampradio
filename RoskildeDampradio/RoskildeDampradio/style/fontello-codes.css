@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+.icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-mail:before { content: '\2709'; } /* '✉' */
+.icon-pencil-neg:before { content: '\270f'; } /* '✏' */
+.icon-trash:before { content: '\e729'; } /* '' */
+.icon-globe:before { content: '🌎'; } /* '\1f30e' */
+.icon-floppy:before { content: '💾'; } /* '\1f4be' */
+.icon-home, .icon-mail, .icon-globe
+{
+    color: White !important;
+}
+.icon-floppy, .icon-trash, .icon-pencil-neg
+{
+    color: Black !important;
+}

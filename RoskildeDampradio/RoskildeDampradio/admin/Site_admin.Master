@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site_admin.master.cs" Inherits="RoskildeDampradio.admin.Site_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../style/fontello-codes.css" rel="stylesheet" type="text/css" />
+    <link href="../style/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../style/fontello-embedded.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="top">
+            <div class="content">
+                <a id="top_navn" href="#">Roskilde Dampradio</a>
+                <ul class="nav">
+                    <li><a href="default.aspx"><i class="icon-home"></i>Oversigt</a></li>
+                    <li><a href="~/" runat="server" target="_blank"><i class="icon-globe"></i>Vis siden</a></li>
+                    <li><a href="#contact"><i class="icon-mail"></i>Kontakt RTSWEB for support</a></li>
+                </ul>
+                <asp:Button ID="Button_logud" CssClass="logud" runat="server" Text="Log ud" />
+            </div>
+        </div>
+        <div id="admin_menu">
+            <div id="admin_menu_content">
+                <asp:Repeater ID="Repeater_menu" runat="server">
+                    <HeaderTemplate><ul></HeaderTemplate>
+                    <ItemTemplate>
+                        <li>
+                            <a href='<%# Eval("side_sti") %>'><%# Eval("menu_punkt") %></a>
+                        </li>
+                    </ItemTemplate>
+                    <FooterTemplate></ul></FooterTemplate>
+                </asp:Repeater>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

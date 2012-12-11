@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RoskildeDampradio.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Roskilde Dampradio</title>
+    <link href="style/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="header"></div>
+        <div id="banner">
+            <div id="logo">
+                <a href="~/" runat="server">
+                    <img src="~/billeder/logo.png" runat="server" alt="" />
+                </a>
+            </div>
+        </div>
+        <div id="wrap">
+            <div id="first_colon">
+                <div id="menu_v">
+                    <asp:Repeater ID="Repeater_menu_v" runat="server" DataSourceID="SqlDataSource_menu_v">
+                        <HeaderTemplate>
+                            <ul>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <li>
+                                <a href='<%# Eval("side_navn_sti") %>'><%# Eval("menu_punkt") %></a>
+                            </li>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </ul>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                    <asp:SqlDataSource ID="SqlDataSource_menu_v" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                        SelectCommand="SELECT * FROM [menu] WHERE ([side_v_h] = @side_v_h) ORDER BY position">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="0" Name="side_v_h" Type="Byte" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    <hr />
+                </div>
+                
+                <div id="side_panel_v">
+                    <asp:Repeater ID="Repeater_side_panel_v" runat="server" 
+                        DataSourceID="SqlDataSource_side_panel_v">
+                        <ItemTemplate>
+                            <div class="sidepanel">
+                                <h4><%# Eval("overskrift") %></h4>
+                                <p><%# Eval("tekst") %></p>
+                            </div>
+                            <a href='poster.aspx?id=<%# Eval("id") %>'>Klik her for at se mere</a>
+                            <hr />
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <asp:SqlDataSource ID="SqlDataSource_side_panel_v" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                        SelectCommand="SELECT poster.*, kategori.* FROM poster INNER JOIN kategori ON poster.kategori_id = kategori.id WHERE (poster.side_v_h = @side_v_h) AND (kategori.type = @type) ORDER BY poster.position">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="0" Name="side_v_h" Type="Byte" />
+                            <asp:Parameter DefaultValue="side panel" Name="type" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                </div>
+            </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+                </asp:ContentPlaceHolder>
+            <div id="third_colon">
+                <div id="menu_h">
+                    <asp:Repeater ID="Repeater_menu_h" runat="server" DataSourceID="SqlDataSource_menu_h">
+                        <HeaderTemplate>
+                            <ul>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <li>
+                                <a href='<%# Eval("side_navn_sti") %>'><%# Eval("menu_punkt") %></a>
+                            </li>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </ul>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                    <asp:SqlDataSource ID="SqlDataSource_menu_h" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                        SelectCommand="SELECT * FROM [menu] WHERE ([side_v_h] = @side_v_h) ORDER BY position">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="1" Name="side_v_h" Type="Byte" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    <hr />
+                </div>
+                
+                <div id="side_panel_h">
+                    <asp:Repeater ID="Repeater_side_panel_h" runat="server" 
+                        DataSourceID="SqlDataSource_side_panel_h">
+                        <ItemTemplate>
+                            <div class="sidepanel">
+                                <h4><%# Eval("overskrift") %></h4>
+                                <p><%# Eval("tekst") %></p>
+                            </div>
+                            <a href='poster.aspx?id=<%# Eval("id") %>'>Klik her for at se mere</a>
+                            <hr />
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <asp:SqlDataSource ID="SqlDataSource_side_panel_h" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                        SelectCommand="SELECT poster.*, kategori.* FROM poster INNER JOIN kategori ON poster.kategori_id = kategori.id WHERE (poster.side_v_h = @side_v_h) AND (kategori.type = @type) ORDER BY poster.position">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="1" Name="side_v_h" Type="Byte" />
+                            <asp:Parameter DefaultValue="side panel" Name="type" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer_info">
+                <asp:Repeater ID="Repeater_footer" runat="server" 
+                    DataSourceID="SqlDataSource_footer">
+                    <ItemTemplate>
+                        <p class="footer_info">
+                            <%# Eval("navn") %><br />
+                            <%# Eval("adresse") %><br />
+                            <%# Eval("postnr") %> <%# Eval("town") %><br />
+                        </p>
+                        <p class="footer_info">
+                            Tlf: <%# Eval("telefon") %><br />
+                            Info tlf: <%# Eval("info_telefon") %><br />
+                            Fax: <%# Eval("fax") %><br />
+                        </p>
+                        <p id="footer_info1">
+                            Du er også velkomne til at kontakte os <br />
+                            på vores e-mail: <br />
+                            <a href='mailto:<%# Eval("email") %>'><%# Eval("email") %></a><br />
+                        </p>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <asp:SqlDataSource ID="SqlDataSource_footer" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    SelectCommand="SELECT * FROM [kontakt_info]"></asp:SqlDataSource>
+                </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
